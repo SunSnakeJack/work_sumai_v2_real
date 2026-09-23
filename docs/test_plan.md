@@ -16,12 +16,14 @@ Record hardware revisions, firmware commit, supply voltage, test environment, re
 - [ ] 12. Verify monitoring OFF immediately silences both buzzers and turns off the LED.
 - [ ] 13. Connect to the intended Wi-Fi network.
 - [ ] 14. Confirm the device is online in Blynk.
-- [ ] 15. Confirm V0-V4 live telemetry and units.
+- [ ] 15. Confirm V0 Sound RMS, V1 acceleration magnitude, V2 gyroscope magnitude, V3 String alert state, and V4 monitoring 0/1.
 - [ ] 16. Confirm one `sound_alert` push notification per eligible transition/cooldown.
-- [ ] 17. Confirm one `motion_alert` push notification per eligible transition/cooldown.
+- [ ] 17. Confirm one `movement_alert` push notification per eligible transition/cooldown.
 - [ ] 18. Confirm one `combined_alert` push notification per eligible transition/cooldown.
 - [ ] 19. Remove Wi-Fi while confirming local sensing, LED, and buzzers continue.
 - [ ] 20. Restore Wi-Fi and confirm automatic Blynk reconnection and telemetry recovery.
+- [ ] 21. Confirm offline Sound, Movement, and Combined alerts are delivered as pending events after reconnect, subject to their firmware cooldowns.
+- [ ] 22. Confirm a same-incident Combined alert supersedes lower-priority pending Sound or Movement events.
+- [ ] 23. Confirm Combined incident dominance suppresses later Sound or Movement cloud events until NORMAL or MONITORING_OFF.
 
 Also inspect for unexpected heating, unstable power, resets, acoustic coupling between buzzers and microphone, false triggers, enclosure pressure points, exposed conductors, sharp edges, strap restriction, and battery movement. Do not test the device on a child until appropriate engineering and safety review has been completed.
-
